@@ -1,0 +1,45 @@
+:root {
+    --color-azul: #54afec;
+    --color-azul-2: #54afecb7;
+    --color-menta: #A2D9CE;
+    --color-laranja: #f79287;
+    --color-laranja-2: #f87364;
+    --color-text: #222121;
+    --color-secondary: #fff;
+    --box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.226);
+    
+}
+
+/* about estilo */
+#about{
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#title-section{
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-laranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#title-about{
+    color: var(--color-secondary);
+    font-size: 40px;
+}
+#content-about{
+    display: flex;
+    justify-content: space-between;
+ 
+    
+}
+#left-about{
+    width: 50%;
+    padding: 30px;
+    
+}

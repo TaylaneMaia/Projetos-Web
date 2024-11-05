@@ -1,0 +1,183 @@
+:root {
+    --color-azul: #54afec;
+    --color-azul-2: #54afecb7;
+    --color-menta: #A2D9CE;
+    --color-laranja: #f79287;
+    --color-laranja-2: #f87364;
+    --color-text: #222121;
+    --color-secondary: #fff;
+    --box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.226);
+    
+}
+
+main{
+    width: 100%;
+    margin: auto;
+}
+#home{
+    width: 99%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+#left-home{
+    width: 50%;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#title{
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-azul);
+}
+#subtitle{
+    color: var(--color-text);
+    font-weight: 600;
+}
+#btn-home{
+    width: 30%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-laranja-2);
+    color: var(--color-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
+    transition:  transform 0.2s ease;
+}
+#btn-home:hover{
+    transform: scale(1.1);
+    background-color: var(--color-laranja);
+}
+#rigth-home{
+    width: 55%;
+    margin-right: 5px;
+}
+span{
+    width: 50%;
+    height: 548px;
+    background-color: var(--color-azul);
+    position: absolute;
+    border-radius: 50% 20% 0% 10%;
+    top: 99px;
+    right: 0;
+    z-index: 1;
+}
+#img-home{
+    position: relative;
+    z-index: 2;
+    width: 750px;
+    padding-top: 232px;
+    padding-bottom: 9px; 
+}
+/* RESPONSIVIDADE HOME PARA TABLET grande*/
+@media (max-width:1024px){
+    #home{
+        box-sizing: border-box;
+        position: fixed;
+        max-width: 100%;
+        max-height: 700px;
+       
+    }
+    #left-home{
+        padding-top: 80px;
+        max-width: 50%;
+        justify-content: center;
+    }
+    #btn-home{
+        width: 170px;
+
+    }
+    #rigth-home{
+        max-width: 50%;
+    }
+    span{
+        padding-top: 15px;
+        max-height: 600px;
+    }
+    #img-home{
+        max-width: 600px;
+        padding-top: 290px;
+        margin-right: 5rem;
+    }
+
+}
+/* RESPONSIVIDADE PARA MINI TABLET */
+@media (max-width:768px){
+    #home{
+        box-sizing: border-box;
+        position: fixed;
+        max-width: 100%;
+        max-height: 700px;
+       
+    }
+    #left-home{
+        padding-top: 60px;
+        max-width: 40%;
+        justify-content: center;
+    }
+    #title{
+        font-size: 50px;
+    }
+    #subtitle{
+        font-size: 18px;
+    }
+    #btn-home{
+        width: 160px;
+
+    }
+    #rigth-home{
+        max-width: 50%;
+    }
+    span{
+        max-height: 400px;
+        padding-top: 100px;
+    }
+    #img-home{
+        max-width: 460px;
+        padding-top: 240px;
+        margin-right: 5rem;
+    }
+
+}
+/* RESPONSIVIDADE HOME PARA MOBILE */
+
+ @media (max-width: 481px){
+    #home{
+        max-width: 100%;
+        max-height: 500px;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--color-azul-2);
+    }
+    #left-home{
+        flex-direction: column;
+        padding-top: 80px;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+    
+    }
+    #title{
+        font-size: 38px;
+        color: var(--color-secondary);
+    }
+    #subtitle{
+        font-size: 16px;
+        color: var(--color-secondary);
+    }
+    #btn-home{
+        width: 160px;
+    }
+    #rigth-home, img, span{
+        display: none;
+    }
+ }

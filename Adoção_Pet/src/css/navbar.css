@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --color-azul: #5DADE2;
+    --color-menta: #A2D9CE;
+    --color-laranja: #F1948A;
+    --color-laranja-2: #f87364;
+    --color-text: #141313;
+    --color-secondary: #fff;
+    --box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.329);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 20px;
+    background-color: var(--color-secondary);
+}
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    width: 12%;
+    display: flex;
+    transition: transform 0.2s ease;
+}
+#logo:hover{
+    transform: scale(1.1);
+}
+#nav-link{
+    width: 70% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+#nav-link a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: var(--color-azul);
+   
+}
+#nav-link a:hover{
+    color: var(--color-laranja);
+}
+#btn{
+    width: 15%;
+}
+#btn-nav{
+    padding: 12px;
+    width: 70%;
+    border: none;
+    background-color: var(--color-laranja-2);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    font-size: 15px;
+    color: var(--color-secondary);
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+#btn-nav:hover{
+    transform: scale(1.1);
+    background-color: var(--color-laranja);
+}
+#menu-mobile{
+    display: none;
+}
+
+/* RESPONSOVIDADE NAV Tablet */
+@media (max-width: 1024px){
+    #container{
+        width: 90%;
+    }
+    #logo{
+        display: block;
+        width: 25%;
+    }
+    #nav-link {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 130px;
+        right: 10px;
+        align-items: start;
+        background-color: var(--color-secondary);
+    }
+    #btn-nav{
+        display: none;
+    }
+    #menu-mobile{
+        display: block;
+        padding: 12px;
+        border: none;
+        background-color: transparent;
+    }
+    .bi-list{
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--color-azul);
+    }
+    /* estilo dos links da navbar menu  */
+    #nav-link.open {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 45vh;
+        top: 60px;
+        background-color: var(--color-secondary);
+        padding-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: var(--color-azul);
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
